@@ -16,10 +16,22 @@ transforms it with pandas, and writes structured results plus a summary report.
 - **Config management:** everything lives in `config.yaml`; CLI flags can override paths
 - **Tests:** pytest suite covering each cleaning rule and an end-to-end run
 
+## Live demo
+
+A Streamlit web app (`app.py`) wraps the pipeline: upload a CSV/JSON file (or use the sample),
+see raw vs. cleaned data side by side, view the change summary, and download the results.
+
+```bash
+streamlit run app.py
+```
+
+Live URL: _add your Streamlit Cloud link here_
+
 ## Project structure
 
 ```
 .
+├── app.py                 # Streamlit web demo
 ├── config.yaml            # all settings
 ├── requirements.txt
 ├── src/
@@ -29,6 +41,7 @@ transforms it with pandas, and writes structured results plus a summary report.
 │   ├── readers.py         # CSV / JSON / API readers
 │   ├── cleaning.py        # cleaning + transformation rules
 │   └── writers.py         # CSV / JSON output + summary report
+├── app.py                 # Streamlit demo
 ├── data/
 │   ├── sample_input.csv   # messy example input
 │   ├── sample_output.csv  # cleaned result
@@ -64,6 +77,14 @@ python -m src.main --config my_config.yaml
 Exit codes: `0` success, `1` input/processing error, `2` config error.
 
 To read from JSON or an API, set `input.format` to `json` or `api` (and `input.api_url`) in `config.yaml`.
+
+## Live demo (Streamlit)
+
+```bash
+streamlit run app.py
+```
+
+Upload a CSV (or use the sample data) to see the raw vs. cleaned data, a processing summary, and a download button.
 
 ## Configuration (`config.yaml`)
 
