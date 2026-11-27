@@ -1,0 +1,12 @@
+Order ID,Customer Name,Email,Order Date,Quantity,Unit Price,Country
+1001,  alice johnson ,Alice@Example.com,2026-01-05,2,19.99,usa
+1002,bob smith,bob@example,2026-01-06,1,"$1,250.00",canada
+1003,CAROL WHITE,carol@example.com,01/07/2026,N/A,35.50,uk
+1004,david brown,david@example.com,2026-01-08,3,,india
+1005,,eve@example.com,2026-01-09,5,12.00,
+1002,bob smith,bob@example.com,2026-01-06,1,1250.00,canada
+1006,frank green,frank@example.com,not a date,2,9.99,germany
+,grace hall,grace@example.com,2026-01-11,1,15.00,france
+1007,henry king,henry@example.com,2026-01-12,-4,20.00,usa
+1008,irene lopez,irene@example.com,2026-01-13,2,abc,spain
+1009,jack young,jack@example.com,2026-01-14,4,7.25,null

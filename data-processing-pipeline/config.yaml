@@ -1,0 +1,33 @@
+input:
+  format: csv              # csv | json | api
+  path: data/sample_input.csv
+  api_url: null            # used when format is "api"
+  api_timeout_seconds: 15
+
+output:
+  format: csv              # csv | json
+  path: data/sample_output.csv
+  summary_path: data/summary.json
+
+cleaning:
+  # column name -> target type (int, float, str, date)
+  schema:
+    order_id: int
+    customer_name: str
+    email: str
+    order_date: date
+    quantity: int
+    unit_price: float
+    country: str
+  required: [order_id, order_date]       # rows missing these are dropped
+  drop_duplicates_on: [order_id]         # keeps the last occurrence
+  fill_defaults:
+    quantity: 1
+    country: Unknown
+    customer_name: Unknown
+  fill_median: [unit_price]              # missing numerics filled with median
+  na_tokens: ["", "na", "n/a", "null", "none", "nan", "-"]
+
+logging:
+  level: INFO
+  file: logs/pipeline.log

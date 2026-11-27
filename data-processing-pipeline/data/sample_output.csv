@@ -1,0 +1,8 @@
+order_id,customer_name,email,order_date,quantity,unit_price,country,total_price
+1001,Alice Johnson,alice@example.com,2026-01-05,2,19.99,USA,39.98
+1002,Bob Smith,bob@example.com,2026-01-06,1,1250.0,Canada,1250.0
+1003,Carol White,carol@example.com,2026-01-07,1,35.5,UK,35.5
+1004,David Brown,david@example.com,2026-01-08,3,19.99,India,59.97
+1005,Unknown,eve@example.com,2026-01-09,5,12.0,Unknown,60.0
+1008,Irene Lopez,irene@example.com,2026-01-13,2,19.99,Spain,39.98
+1009,Jack Young,jack@example.com,2026-01-14,4,7.25,Unknown,29.0
